@@ -1,0 +1,68 @@
+# ProX - Advanced Calculator Program
+
+# Function to add two numbers
+def add(a, b):
+    return a + b
+
+# Function to subtract two numbers
+def subtract(a, b):
+    return a - b
+
+# Function to multiply two numbers
+def multiply(a, b):
+    return a * b
+
+# Function to divide two numbers (handles division by zero)
+def divide(a, b):
+    if b == 0:
+        return "Error: Division by zero!"
+    return a / b
+
+# Function to calculate factorial
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+# Function to generate Fibonacci series up to n terms
+def fibonacci(n):
+    fib_series = [0, 1]
+    for i in range(2, n):
+        fib_series.append(fib_series[i - 1] + fib_series[i - 2])
+    return fib_series
+
+# Main Program
+print("Welcome to ProX Calculator!")
+print("1: Add, 2: Subtract, 3: Multiply, 4: Divide, 5: Factorial, 6: Fibonacci")
+choice = int(input("Enter your choice: "))
+
+if choice == 1:
+    x = int(input("Enter first number: "))
+    y = int(input("Enter second number: "))
+    print("Result:", add(x, y))
+
+elif choice == 2:
+    x = int(input("Enter first number: "))
+    y = int(input("Enter second number: "))
+    print("Result:", subtract(x, y))
+
+elif choice == 3:
+    x = int(input("Enter first number: "))
+    y = int(input("Enter second number: "))
+    print("Result:", multiply(x, y))
+
+elif choice == 4:
+    x = int(input("Enter numerator: "))
+    y = int(input("Enter denominator: "))
+    print("Result:", divide(x, y))
+
+elif choice == 5:
+    n = int(input("Enter a number for factorial: "))
+    print("Factorial:", factorial(n))
+
+elif choice == 6:
+    n = int(input("Enter number of terms for Fibonacci: "))
+    print("Fibonacci Series:", fibonacci(n))
+
+else:
+    print("Invalid choice!")

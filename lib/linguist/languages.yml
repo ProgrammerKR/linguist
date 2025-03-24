@@ -36,17 +36,6 @@
 # Please keep this list alphabetized. Capitalization comes before lowercase.
 ---
 
-ProX:
-  type: programming
-  extensions:
-    - .prox
-  tm_scope: source.prox
-  ace_mode: text
-  color: "#90EE90"
-  filenames:
-    - ProXfile
-  interpreters:
-    - prox
 
 1C Enterprise:
   type: programming
